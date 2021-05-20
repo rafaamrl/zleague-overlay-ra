@@ -9,43 +9,33 @@
 </head>
 
 <body>
-    <div class="bg-image"></div>
-    <div class="divStandings">
-        <div class="divInfo">
-          <h1 id="title">LOADING</h1>
-          <h1 id="countdown">LOADING: <br> 00:00:00</h1>
-        </div>
-        <div class="divTable">
-            <table class="table" id="table">
-              <thead class="header" id="thead">
+  <a href="index.html"><img src="img/return.svg" alt="return" class="return"></a>
+  <div class="divStandings">
+      <div class="divInfo">
+        <h1 id="title">LOADING</h1>
+        <h1 id="countdown">LOADING: <br> 00:00:00</h1>
+      </div>
+      <div class="divTable">
+          <table class="table" id="table">
+            <thead class="header" id="thead">
+              <tr>
+                <th id="h0" rowspan="2">#</th>
+                <th id="h1" rowspan="2">NAME</th>
+                <th id="h2" class="borderGames padding">GAMES</th>
+                <th id="h3" rowspan="2">WINS</th>
+                <th id="h4" colspan="2">BEST OF 2 GAMES</th>
+                <th id="h5" rowspan="2">KD</th>
+                <th id="h6" class="borderTotal padding">TOTAL</th>
+              </tr>
+              <tr>
+                <th id="h7">PLAYED</th>
+                <th id="h8" class="padding">KILLS</th>
+                <th id="h9" class="padding">PLACEMENT</th>
+                <th id="h10" class="borderPoints">POINTS</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
                 <tr>
-                  <th id="h0" rowspan="2">#</th>
-                  <th id="h1" rowspan="2">NAME</th>
-                  <th id="h2" class="borderGames padding">GAMES</th>
-                  <th id="h3" rowspan="2">WINS</th>
-                  <th id="h4" colspan="2">BEST OF 2 GAMES</th>
-                  <th id="h5" rowspan="2">KD</th>
-                  <th id="h6" class="borderTotal padding">TOTAL</th>
-                </tr>
-                <tr>
-                  <th id="h7">PLAYED</th>
-                  <th id="h8" class="padding">KILLS</th>
-                  <th id="h9" class="padding">PLACEMENT</th>
-                  <th id="h10" class="borderPoints">POINTS</th>
-                </tr>
-              </thead>
-              <tbody id="tbody">
-                  <tr>
-                      <td>0</td>
-                      <td><div style="width: 115px; overflow: hidden;">LOADING</div></td>
-                      <td>00</td>
-                      <td>00</td>
-                      <td>00</td>
-                      <td>00</td>
-                      <td>0.00</td>
-                      <td class="borderLeft">00</td>
-                  </tr>
-                  <tr>
                     <td>0</td>
                     <td><div style="width: 115px; overflow: hidden;">LOADING</div></td>
                     <td>00</td>
@@ -65,18 +55,30 @@
                   <td>0.00</td>
                   <td class="borderLeft">00</td>
               </tr>
-              </tbody>
-            </table>
-        </div>
-    </div>
-    <img src="img/lined-circle.png" alt="" class="circle-left">
-    <img src="img/lined-circle.png" alt="" class="circle-bottom">
-    <footer class="footer">
-      <div class="container">
-        <span style="margin-left: 20%;">Made by: <a href="http://instagram.com/rafa.amrl" target="_blank">Rafael Amaral</a></span>
-        <a href="https://www.zleague.gg/" target="_blank"><img src="img/zleague-logo.svg" alt="zleague-logo" style="width: 100px;margin-left: 40%;"></a>
+              <tr>
+                <td>0</td>
+                <td><div style="width: 115px; overflow: hidden;">LOADING</div></td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+                <td>0.00</td>
+                <td class="borderLeft">00</td>
+            </tr>
+            </tbody>
+          </table>
       </div>
-    </footer>
+  </div>
+
+  <img src="img/lined-circle.png" alt="" class="circle-left">
+  <img src="img/lined-circle.png" alt="" class="circle-bottom">
+
+  <footer class="footer">
+    <div class="container">
+      <span style="margin-left: 20%;">Made by: <a href="http://instagram.com/rafa.amrl" target="_blank">Rafael Amaral</a></span>
+      <a href="https://www.zleague.gg/" target="_blank"><img src="img/zleague-logo.svg" alt="zleague-logo" style="width: 100px;margin-left: 40%;"></a>
+    </div>
+  </footer>
 </body>
 <script src="js/overlay-script.js"></script>
 </html>
