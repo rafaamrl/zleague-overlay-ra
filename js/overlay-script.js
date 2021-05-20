@@ -20,14 +20,6 @@ else
   window.location.replace("404.html");
 }
 
-/* DARK MODE */
-darkMode(darkmode);
-/*  */
-
-/* SHADOW */
-shadows(shadow);
-/*  */
-
 /* SET TITLE */
 document.getElementById("title").innerHTML = title;
 /*  */
@@ -84,6 +76,14 @@ header += '<th id="h9" class="padding">PLACEMENT</th>';
 header += '<th id="h10" class="borderPoints">POINTS</th>';
 header += '</tr>';
 document.getElementById("thead").innerHTML = header;
+
+/* DARK MODE */
+darkMode(darkmode, game);
+/*  */
+
+/* SHADOW */
+shadows(shadow);
+/*  */
 
 fillTable(tournamentID, division, pre);
 var timerUpdate = setInterval(function() {
@@ -184,7 +184,7 @@ function countdown(startTime, endTime, timerCountdown){
 
 
 /* DARK MODE FUNCTION */
-function darkMode(c){
+function darkMode(c, game){
   if(c == 1)
   {
     document.getElementById("title").style.backgroundColor = "rgb(20, 20, 20)";
@@ -194,7 +194,17 @@ function darkMode(c){
     document.getElementById("countdown").style.backgroundColor = "#c7764b";
     for(i=0;i<=10;i++)
     {
-      document.getElementById("h"+i).style.borderColor = "white";
+      if(game == "fortnite")
+      {
+        if(i != 5)
+        {
+          document.getElementById("h"+i).style.borderColor = "white";
+        }
+      }
+      else
+      {
+        document.getElementById("h"+i).style.borderColor = "white";
+      }
     }
   }
   else
@@ -206,7 +216,17 @@ function darkMode(c){
     document.getElementById("countdown").style.backgroundColor = "eaac8b";
     for(i=0;i<=10;i++)
     {
-      document.getElementById("h"+i).style.borderColor = "#020248";
+      if(game == "fortnite")
+      {
+        if(i != 5)
+        {
+          document.getElementById("h"+i).style.borderColor = "#020248";
+        }
+      }
+      else
+      {
+        document.getElementById("h"+i).style.borderColor = "#020248";
+      }
     }
   }
 }
