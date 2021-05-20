@@ -51,10 +51,8 @@ requestInfo.onload = function () {
   nBestGames = tournamentInfo.nBestGames;
 
   // Dates
-  /* var startTime = new Date(tournamentInfo.startTime).getTime(); */
-  var startTime = new Date("May 20 2021 15:28:00").getTime();
-  /* var endTime = new Date(tournamentInfo.endTime).getTime(); */
-  var endTime = new Date("May 20 2021 15:29:00").getTime();
+  var startTime = new Date(tournamentInfo.startTime).getTime();
+  var endTime = new Date(tournamentInfo.endTime).getTime();
   
 
   // Update the count down every 1 second
