@@ -45,6 +45,7 @@ requestInfo.onload = function () {
   // Dates
   var startTime = new Date(tournamentInfo.startTime).getTime();
   var endTime = new Date(tournamentInfo.endTime).getTime();
+  /* var finishTime = new Date */
   
 
   // Update the count down every 1 second
@@ -156,9 +157,6 @@ function countdown(startTime, endTime, timerCountdown){
     countDownDate = endTime;
     strCDWN = "ENDING IN: "
   }
-
-  // Update today's date and time
-  now = new Date().getTime();
     
   // Find the distance between now and the count down date
   distance = countDownDate - now;
@@ -168,14 +166,15 @@ function countdown(startTime, endTime, timerCountdown){
   minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-  // Output the result in an element with id="demo"
+  // Output the result in an element with id="countdown"
   document.getElementById("countdown").innerHTML = strCDWN + ("0" + hours).slice(-2) + ":"
   + ("0" + minutes).slice(-2) + ":" + ("0" + seconds).slice(-2);
     
   // If the count down is over, write some text 
   if(now > endTime)
   {
-    document.getElementById("countdown").innerHTML = "FINAL <br> GAME";
+    document.getElementById("countdown").innerHTML = "TOURNAMENT <br> FINALIZED";
+    document.getElementById("countdown").style.backgroundColor = "rgb(105, 60, 255)";
     clearInterval(timerCountdown);
   }
 }
