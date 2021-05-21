@@ -48,7 +48,7 @@ requestInfo.onload = function () {
   
 
   // Update the count down every 1 second
-  countdown(startTime, endTime);
+  countdown(startTime, endTime, timerCountdown);
   var timerCountdown = setInterval(function() {
     countdown(startTime, endTime, timerCountdown);
   }, 1000);
@@ -99,7 +99,6 @@ function fillTable(tournamentID, division, pre)
   requestTable.onload = function () {
     // Begin accessing JSON data here
     var table = JSON.parse(this.response)
-    console.log(table);
   
     if (requestTable.status >= 200 && requestTable.status < 400) {
       lines = '';
